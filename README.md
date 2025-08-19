@@ -1,6 +1,6 @@
 # Node Next Registration
 
-A **full-stack registration system** built with:
+A **full-stack registration system** for demonstration purposes only, built with:
 
 - **Frontend:** Next.js 14, Tailwind CSS 4
 - **Backend:** Node.js (Fastify), PostgreSQL
@@ -66,11 +66,22 @@ cd registration-api
 npm install
 ```
 
-Create a `.env` file:
+Create a `.env` file with below fields, update where applicable:
 ```env
-DATABASE_URL=postgres://postgres:yourPassword@localhost:5432/yourDatabase
-JWT_SECRET=yourSecretKey
-JWT_EXPIRES_IN=1d
+# DB
+PGHOST=localhost
+PGPORT=5432
+PGDATABASE=registration_db
+PGUSER=registration_user
+PGPASSWORD=registration_password
+
+# Server
+PORT=4000
+NODE_ENV=development
+
+# Auth
+JWT_ACCESS_SECRET=your-secret
+COOKIE_SIGNING_SECRET=your-secret
 ```
 
 Run database migrations:
@@ -135,4 +146,4 @@ Frontend runs at: **http://localhost:3000**
 
 ## 📜 License
 
-MIT License © 2025 [Your Name]
+MIT License © 2025
