@@ -1,0 +1,45 @@
+{
+  "name": "registration-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx --env-file=.env --watch src/server.ts",
+    "start": "node --env-file=.env --enable-source-maps dist/server.js",
+    "build": "tsc -p .",
+    "db:sql": "psql --username=%PGUSER% --host=%PGHOST% --port=%PGPORT% --dbname=%PGDATABASE%",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "db:generate": "drizzle-kit generate",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/cookie": "^11.0.2",
+    "@fastify/cors": "^11.1.0",
+    "@fastify/helmet": "^13.0.1",
+    "@fastify/rate-limit": "^10.3.0",
+    "bcryptjs": "^3.0.2",
+    "dotenv": "^17.2.1",
+    "drizzle-orm": "^0.44.4",
+    "fastify": "^5.5.0",
+    "jose": "^6.0.12",
+    "jsonwebtoken": "^9.0.2",
+    "ms": "^2.1.3",
+    "pg": "^8.16.3",
+    "zod": "^4.0.17"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/ms": "^2.1.0",
+    "@types/node": "^24.2.1",
+    "@types/pg": "^8.15.5",
+    "drizzle-kit": "^0.31.4",
+    "tsx": "^4.20.4",
+    "typescript": "^5.9.2"
+  }
+}
